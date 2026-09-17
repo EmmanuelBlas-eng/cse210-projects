@@ -32,8 +32,10 @@ class Program
                     Console.Write("> ");
                     string response = Console.ReadLine();
 
+
                     Console.WriteLine("How would describe your mood today? ");
                     Console.Write("> ");
+                    // Creativity addition: each journal entry also records the user's mood.
                     string mood = Console.ReadLine();
 
                     string currentDate = DateTime.Now.ToShortDateString();
