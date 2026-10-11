@@ -19,7 +19,7 @@ class Program
     {
         List<Scripture> library = LoadScriptureLibrary("scriptures.txt");
 
-       
+
         Random random = new Random();
         Scripture scripture = library[random.Next(library.Count)];
 
@@ -29,7 +29,7 @@ class Program
             Console.WriteLine(scripture.GetDisplayText());
             Console.WriteLine();
 
-         
+
             if (scripture.IsCompletelyHidden())
             {
                 break;
@@ -43,12 +43,12 @@ class Program
                 break;
             }
 
-       
+
             scripture.HideRandomWords(3);
         }
     }
 
-  
+
     private static List<Scripture> LoadScriptureLibrary(string filePath)
     {
         List<Scripture> scriptures = new List<Scripture>();
@@ -60,7 +60,7 @@ class Program
             {
                 if (string.IsNullOrWhiteSpace(line)) continue;
 
-               
+
                 string[] parts = line.Split('|');
                 if (parts.Length == 5)
                 {
@@ -85,7 +85,7 @@ class Program
             }
         }
 
-        
+
         if (scriptures.Count == 0)
         {
             scriptures.Add(new Scripture(
